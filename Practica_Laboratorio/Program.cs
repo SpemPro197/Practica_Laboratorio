@@ -139,8 +139,6 @@ namespace Practica_Laboratorio
                         Console.WriteLine("Cerrando....");
                         break;
                 }
-
-
             }
 
         } 
