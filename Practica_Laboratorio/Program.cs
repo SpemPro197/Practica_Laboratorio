@@ -16,7 +16,7 @@ namespace Practica_Laboratorio
         
         static string[] codigos = { "OC-101" , "OC-102" , "OC-103" , "OC-104", "OC-105" , "OC-106" };
         static int max_lotes = codigos.Length;
-        static float[] precios_lotes;
+        static float[] precios_lotes = new float[max_lotes];
         static string[] codigos_ocupados;
         static string[] proveedores = { "TechCorp I", "LogiExpress", "InsumosGlobal", "TechCorp II", "AlfaSuministros", "ServiReds" };
         static float[] columnas;
@@ -75,17 +75,18 @@ namespace Practica_Laboratorio
 
                 Random numero_aleatorio = new Random();
 
-            Console.WriteLine("¡Datos registrados exitosamente!!! Numero de pedido: " + numero_aleatorio.Next(0 - 100));
+            Console.WriteLine("¡Datos registrados exitosamente!!!!");
             
         }
 
         static public void Mostrar_Lotes()
         {
             Console.WriteLine("============================================");
+            Console.WriteLine("\t CODIGO \t CANTIDAD \t\t PRECIO");
             for (int i = 0; i < codigos.Length; i++)
             {
-                Console.WriteLine("\t CODIGO \t CANTIDAD \t PRECIO");
-                Console.WriteLine($"Codigo: {codigos[i]}\t Prov: {proveedores[i]}\t Monto: {precios_lotes[i]}");
+                
+                Console.WriteLine($"Codigo: {codigos[i]} |    Prov: {proveedores[i]} \t\t Monto: {precios_lotes[i]}");
             }
             Console.WriteLine("============================================");
         }
